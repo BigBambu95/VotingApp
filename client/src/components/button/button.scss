@@ -1,0 +1,150 @@
+@import "../../colors.scss";
+
+.btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 80px;
+    padding: .5em 1em;
+    border: none;
+    border-radius: .35em;
+    font-family: inherit;
+    font-size: 0.875rem;
+    line-height: 1.75;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    transition: .2s all;
+
+    &.small {
+        font-size: 0.75rem;
+
+        .btn__icon {
+            width: 18px;
+            height: 18px;
+        }
+    }
+    
+    &.large {
+        font-size: 1rem;
+    }
+
+    &.disabled,
+    &.loading {
+        pointer-events: none;
+        cursor: default;
+    }
+
+    &.rounded {
+        border-radius: 50%;
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        margin-right: .5em;
+    }
+}
+
+
+.btn.contained {
+    background: $purpleColor;
+
+    &:hover {
+        background: $purpleColorHover;
+    }
+
+    &:active {
+        background: $purpleColorActive;
+    }
+
+    &.disabled {
+        background: $lightPurpleColor;
+        color: rgba(0, 0, 0, 0.26);
+    }
+    
+    &.disabled:hover {
+        background: $lightPurpleColor;
+    }
+}
+
+
+.btn.text {
+    background: none;
+    color: #000;
+
+    &:hover {
+        background: $purpleColorHover;
+        color: #fff;
+    }
+    
+    &:active {
+        background: $purpleColorActive;
+        color: #fff;
+    }
+
+    &.disabled {
+        color: rgba(0, 0, 0, 0.26);
+    }
+}
+
+.btn.outlined {
+    border: 1px solid #A23A99;
+    background: none;
+    color: #000;
+
+    &:hover {
+        background: #B254AA;
+        color: #fff;
+    }
+
+    &:active {
+        background:#7A1871;
+        color: #fff;
+    }
+    
+    &.disabled {
+        border-color: rgba(0, 0, 0, 0.26);
+        color: rgba(0, 0, 0, 0.26);
+    }
+}
+
+.btn.icon {
+    color: #fff;
+
+    &:hover {
+        background: $lightPurpleColor;
+    }
+}
+
+.btn.active {
+    background: $purpleColorActive;
+}
+
+.btn.active:hover {
+    background: $purpleColorActive;
+}
+
+.btn svg {
+    fill: currentColor;
+}
+
+.btn__spinner {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #fff;
+    animation: 1.5s spin infinite linear;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  

@@ -1,0 +1,19 @@
+@import '../../colors.scss';
+
+.select-item {
+    padding: .5em 1em;
+    text-align: left;
+    cursor: pointer;
+
+
+    &:hover {
+        background: $purpleColor;
+        color: #fff;
+    }
+
+    &.disabled {
+        color: rgba(0, 0, 0, 0.38);
+        pointer-events: none;
+        cursor: default;
+    }
+}

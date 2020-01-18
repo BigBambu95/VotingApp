@@ -1,0 +1,54 @@
+@import "../../colors.scss";
+
+.text-field {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    background: #fff;
+    transition: .2s all ease-in-out;
+
+    &__input {
+        width: 100%;
+        border: 1px solid #ccc;
+        font-family: inherit;
+        font-size: 0.875rem;
+        background: none;
+        outline: none;
+        transition: inherit;
+    }
+
+    &__input:focus {
+        border: 1px solid $purpleColor;
+        box-shadow: 0 0 0 1px $purpleColor;
+    }
+
+    &__input:focus ~ &__label {
+        top: 0;
+        padding: 0 .25em;
+        transform: translateX(-10px) translateY(-50%) scale(0.75);
+    }
+
+    &__label {
+        position: absolute;
+        top: 50%;
+        left: 1em;
+        transform: translateY(-50%);
+        background: inherit;
+        transition: inherit;
+        pointer-events: none;
+    }
+
+    &.normal &__input {
+        padding: .75em 1em;
+    }
+
+    &.small &__input {
+        padding: .5em 1em;
+    }
+
+    &.filled &__label {
+        top: 0;
+        padding: 0 .25em;
+        transform: translateX(-10px) translateY(-50%) scale(0.75);
+    }
+}

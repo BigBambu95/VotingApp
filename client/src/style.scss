@@ -1,0 +1,241 @@
+@import "./colors.scss";
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, "sans-serif";
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.link {
+    color: #000;
+    text-decoration: none;
+    font-size: .85rem;
+}
+
+.voting-app {
+    margin: auto;
+}
+
+.container {
+    max-width: 1080px;
+    width: 100%;
+    color: currentColor;
+
+}
+
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 1.5em;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.main-header__right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-header__right div {
+    margin-left: 2em;
+}
+
+.main-title {
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    min-height: 300px;
+    margin: 2em 0;
+}
+
+.poll-list {
+    width: 100%;
+    align-self: flex-start;
+}
+
+
+.poll-list__item {
+    border-bottom: 1px solid $lightPurpleColor;
+    background: $purpleColor;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+
+.poll-list__item a {
+    display: inherit;
+    padding: 1em 1.5em;
+}
+
+.poll-list__item:hover {
+    background: $purpleColorHover;
+}
+
+.form-group {
+    position: relative;
+    margin: 1.5em 0;
+    text-align: center;
+}
+
+.login-form,
+.registration-form,
+.create-poll-form {
+    width: 320px;
+    margin: auto;
+}
+
+.vote-form__wrapper {
+    flex-basis: 30%;
+
+    h1 {
+        margin-top: 0;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.poll-details {
+    flex-basis: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1em;
+}
+
+.modal-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.modal-window__body {
+    z-index: 99;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    width: 320px;
+    background: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+.modal-window__body__text {
+    margin-bottom: 1em;
+}
+
+.modal-window__overlay {
+    z-index: 90;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+}
+
+.plus {
+    position: relative;
+    padding-left: 27px;
+}
+
+.plus:before,
+.plus:after {
+    position: absolute;
+    content: "";
+    background-color: #fff;
+}
+
+.plus:before {
+    top: 1px;
+    left: 6px;
+    width: 2px;
+    height: 14px;
+}
+
+.plus:after {
+    top: 7px;
+    left: 0;
+    width: 14px;
+    height: 2px;
+}
+
+.close-icon {
+    position: absolute;
+    top: 14px;
+    right: -38px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.close-icon:before,
+.close-icon:after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    width: 2px;
+    height: 100%;
+    background-color: #ccc;
+}
+
+.close-icon:before {
+    transform: rotate(45deg);
+}
+
+.close-icon:after {
+    transform: rotate(-45deg);
+}
+
+.close-icon:hover:before,
+.close-icon:hover:after {
+    background-color: $purpleColor;
+}
+
+.error {
+    color: $errorColor;
+}
